@@ -64,11 +64,12 @@ with a class attribute containing 'col-' */
   .hamburger-dropdown-content {
     display: none;
     position: absolute;
-    top: 15px;
+    top: 50px;
   }
 
   .hamburger-dropdown:hover .hamburger-dropdown-content {
     display: block;
+    background: lightblue;
   }
 
   .hamburger-dropdown-content li a:hover {
