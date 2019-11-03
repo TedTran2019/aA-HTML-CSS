@@ -1,0 +1,50 @@
+/* PHASE 8: Thumbs */
+
+.friends {
+	display: grid;
+	grid-template-columns: 58px 58px 58px;
+	grid-gap: 12px;
+	margin-bottom: 12px;
+}
+
+.thumb {
+	display: block;
+	position: relative;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.thumb:before {
+	content: "";
+	display: none;
+	position: absolute;
+	z-index: 1;
+	left:  50%;
+	transform: translateX(-50%);
+	top: -7px;
+	/* Creating a triangle */
+	border-top: 5px solid #000;
+  border-bottom: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.thumb:after {
+	content: attr(title);
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: black;
+	color: white;
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	bottom: 65px;
+}
+
+.thumb:hover:before,
+.thumb:hover:after {
+	display: block;
+}
